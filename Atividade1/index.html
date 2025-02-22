@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Fest</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="ico.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+
+        <img src="MusicFest.png" alt="Imagem da Companhia de Eventos MusicFest" width="100%">
+        <header style="font-family: fantasy; font-size: 30px; color: #ffffff; text-align: center;">
+            <p style="display: inline; margin-right: 20px;">Tomorrow Brasil</p>
+            <p style="display: inline; margin-right: 20px;">Tomorrow Brasil</p>
+            <p style="display: inline; margin-right: 20px;">Tomorrow Brasil</p>
+            <p style="display: inline; margin-right: 20px;">Tomorrow Brasil</p>
+        </header>
+        <div class="audio">
+            <h1 style="font-size: 20px;">Lançamento do DJ Alok! Ouça Agora</h1>
+            <p>Meduza, Alok - Piece Of Your Heart (Alok Remix) ft. Goodboys</p>
+            <audio controls>
+                <source src="Iframe Meduza, Alok - Piece Of Your Heart (Alok Remix) ft. Goodboys [MTbX4KC0AaU].mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between;">
+
+            <iframe width="850" height="478" src="https://www.youtube.com/embed/TfZJaQQ9UYE?autoplay=1&mute=1&si=JhqoTpYGnojwbrOu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <table>
+                <caption style="caption-side: top; color: white; font-size: 20px; margin-bottom: 15px; margin-top: 10px; background-color: #46124e; border: 2px solid white; padding: 10px;">Programação</caption>
+                <tr>
+                    <th>Artista</th><th>Horário Início</th><th>Horário Término</th><th>Data</th>
+                </tr>
+                <tr>
+                    <td>DJ Alok</td><td>18:00</td><td>19:00</td><td>28/02/2025</td>
+                </tr>
+                <tr>
+                    <td>Vintage Culture</td><td>19:30</td><td>20:30</td><td>28/02/2025</td>
+                </tr>
+                <tr>
+                    <td>Illusionize</td><td>22:30</td><td>23:30</td><td>28/02/2025</td>
+                </tr>
+                <tr>
+                    <td>Dubdogz</td><td>03:00</td><td>04:00</td><td>01/03/2025</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="form-container">
+            <h2>Inscreva-se no Evento</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label>Escolha do tipo de ingresso:</label>
+                <input type="radio" id="pista" name="ticket" value="Pista" required>
+                <label for="pista">Pista</label>
+                <input type="radio" id="vip" name="ticket" value="VIP" required>
+                <label for="vip">VIP</label>
+                <input type="radio" id="camarote" name="ticket" value="Camarote" required>
+                <label for="camarote">Camarote</label>
+
+                <label for="updates">Preferência por notificações:</label>
+                <input type="checkbox" id="updates" name="updates">
+                <label for="updates">Receber atualizações por e-mail</label>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
