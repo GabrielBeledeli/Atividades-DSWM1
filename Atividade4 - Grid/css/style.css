@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #b5b8bb;
+    color: #D1D1D1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #1C3D5B;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    color: #E8E1D6;
+}
+.container {
+    max-width: 1800px;
+    margin: 20px auto;
+}
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.imagens {
+    width: 430px;
+    height: 300px;
+    border-radius: 10px;
+}
+.receita {
+    color: #1C3D5B; 
+    background-color: #E8E1D6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #D1D1D1;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 450px;
+    max-height: 360px;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.receita:hover{
+    transform: scale(1.05);
+    transition: max-height 1.5s ease;
+    max-height: 1000px;
+    box-shadow: 0px 0px 10px #A7C6ED;
+}
+.receita h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.receita h3{
+    text-align: left;
+    padding: 5px;
+}
+.receita:nth-child(1)>h2::before {
+    content: "🍙";
+}
+.receita:nth-child(1)>h2::after {
+    content: "🍙";
+}
+.receita:nth-child(2)>h2::before {
+    content: "🍲";
+}
+.receita:nth-child(2)>h2::after {
+    content: "🍲";
+}
+.receita:nth-child(3)>h2::before {
+    content: "🥒";
+}
+.receita:nth-child(3)>h2::after {
+    content: "🥒";
+}
+.receita:nth-child(4)>h2::before {
+    content: "🍳";
+}
+.receita:nth-child(4)>h2::after {
+    content: "🍳";
+}
+.receita:nth-child(5)>h2::before {
+    content: "🍚";
+}
+.receita:nth-child(5)>h2::after {
+    content: "🍚";
+}
+.receita:nth-child(6)>h2::before {
+    content: "🍜";
+}
+.receita:nth-child(6)>h2::after {
+    content: "🍜";
+}
+.receita:nth-child(7)>h2::before {
+    content: "🍯";
+}
+.receita:nth-child(7)>h2::after {
+    content: "🍯";
+}
+.receita:nth-child(8)>h2::before {
+    content: "🥟";
+}
+.receita:nth-child(8)>h2::after {
+    content: "🥟";
+}
+.receita:nth-child(9)>h2::before {
+    content: "🍡";
+}
+.receita:nth-child(9)>h2::after {
+    content: "🍡";
+}
+ul li {
+    margin-left: 20px;
+    padding: 3px;
+}
+ol li{
+    margin-left: 20px;
+    padding: 3px;
+}
+footer{
+    background-color: #1C3D5B;
+    color: #D1D1D1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+@media (max-width: 1368px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+@media (max-width: 968px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,80 @@
+/* Estilização geral do corpo da página
+    */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        display: flexbox;
+        justify-content: center;
+    }
+
+/* Cabeçalho da página */
+header {
+    background-color: #43a700;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+ 
+}
+
+/* Estilização do contêiner de navegação */
+.nav-container {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto; /* Centraliza o contêiner */
+    width: 50%; /* Ajuste a largura */
+    border-radius: 8px; /* Arredonda os cantos da borda */
+}
+
+/* Estilização do menu de navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens da lista na mesma linha */
+    margin: 5%;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px;
+}
+
+    /*---Classes---*/
+    .conteudo{
+        background-color: #e8f5e9;
+        margin: 20px auto; /*centralizar a caixa e adiciona um espaçamento*/
+        padding: 15px;
+        width: 80%;
+        box-shadow: 0px 0px 10px rgba(0,0,0);/*Adiciona sombra*/
+        border-radius: 8px; /*arredonda os cantos da borda*/
+        border: 2px solid #4caf50
+
+    }
+    .destaque{
+        border: 2px solid #4caf50;
+        padding: 15px;
+        background-color: #e8f5e9;   
+    }
+    img {
+        width: 100%;
+        max-width: 750px;
+        display: block;  /* remove espaçamentos */
+        margin: 10px auto; /* Centraliza a imagem */
+    }
+    footer{
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        /* fixar o rodapé embaixo da pagina */
+        position: relative;
+        bottom: 0;
+    }
