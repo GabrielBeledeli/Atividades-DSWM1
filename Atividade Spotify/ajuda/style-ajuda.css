@@ -52,7 +52,10 @@ nav.navbar-transparente {
 .ajuda-header a:hover {
     color: #9bf0e1;
 }
-
+.text-wrap {
+    word-wrap: break-word;
+    white-space: normal;
+}
 /* Accordion Section */
 .ajuda h1, .ajuda h3 {
     color: #7c25f8;
@@ -243,3 +246,4 @@ footer ul li {
     float: right;
     margin: 0 5px;
 }
+
