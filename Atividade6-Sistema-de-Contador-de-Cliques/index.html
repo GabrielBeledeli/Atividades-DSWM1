@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Curtidas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f4f4f4, #e9e9e9);
+            padding: 3rem;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            color: #CF291D;
+        }
+
+        label {
+            font-size: 1.1rem;
+        }
+
+        #campoNome {
+            margin-top: 0.5rem;
+            padding: 0.6rem 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: all 0.3s ease;
+            width: 250px;
+        }
+
+        #botaoCurtir {
+            margin-top: 1.2rem;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            background-color: #CF291D;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #botaoCurtir:hover {
+            transform: scale(1.05);
+        }
+
+        /* Classe para efeito hover */
+        .hover-vermelho {
+            background-color: #a82016 !important;
+        }
+
+        #saudacao,
+        #contador {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        #saudacao {
+            font-weight: bold;
+            color: #444;
+        }
+
+        #contador {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Painel de Curtidas</h1>
+
+    <label for="campoNome">Digite seu nome:</label><br>
+    <input type="text" id="campoNome" placeholder="Ex: Ana, João"><br>
+
+    <button id="botaoCurtir">Curtir 👍</button>
+
+    <p id="saudacao"></p>
+    <p id="contador">Você curtiu 0 vezes.</p>
+
+    <script>
+        const campoNome = document.getElementById('campoNome');
+        const botaoCurtir = document.getElementById('botaoCurtir');
+        const saudacao = document.getElementById('saudacao');
+        const contador = document.getElementById('contador');
+
+        let totalCurtidas = 0;
+
+        // Evento de clique no botão
+        botaoCurtir.addEventListener('click', () => {
+            const nome = campoNome.value.trim();
+
+            if (nome === '') {
+                alert('Por favor, digite seu nome antes de curtir.');
+                return;
+            }
+
+            totalCurtidas++;
+            saudacao.innerText = `Olá, ${nome}! Obrigado pela curtida!`;
+            contador.innerText = `Você curtiu ${totalCurtidas} ${totalCurtidas === 1 ? 'vez' : 'vezes'}.`;
+        });
+
+        // Estilo dinâmico ao digitar no campo
+        campoNome.addEventListener('input', () => {
+            const texto = campoNome.value.trim();
+
+            if (texto === '') {
+                campoNome.style.border = '1px solid #ccc';
+                campoNome.style.backgroundColor = '';
+            } else {
+                campoNome.style.border = '2px solid #CF291D';
+                campoNome.style.backgroundColor = '#fff6f4';
+            }
+
+            console.log('Texto modificado:', campoNome.value);
+        });
+
+        // Log de tecla pressionada
+        campoNome.addEventListener('keydown', (e) => {
+            console.log(`Tecla pressionada: ${e.key}`);
+        });
+
+        // Hover com classList
+        botaoCurtir.addEventListener('mouseover', () => {
+            botaoCurtir.classList.add('hover-vermelho');
+        });
+
+        botaoCurtir.addEventListener('mouseout', () => {
+            botaoCurtir.classList.remove('hover-vermelho');
+        });
+    </script>
+
+</body>
+
+</html>
